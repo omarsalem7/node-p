@@ -1,0 +1,23 @@
+{
+  "name": "node-practise",
+  "version": "1.0.0",
+  "description": "learn node, express and mongoDB",
+  "main": "app.js",
+  "scripts": {
+    "dev": "npx nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omarsalem7/node-p.git"
+  },
+  "author": "omar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/omarsalem7/node-p/issues"
+  },
+  "homepage": "https://github.com/omarsalem7/node-p#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
