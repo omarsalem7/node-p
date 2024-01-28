@@ -1,11 +1,17 @@
 const express = require("express");
+const morgan = require("morgan");
+
 const app = express();
-const port = 2001;
+app.use(express.json());
 
-app.get("/", (req, res) => {
-  res.status(200).send("hello from server");
-});
+if (process.env.NODE_ENV == "development") {
+  app.use(morgan("dev"));
+}
 
-app.listen(port, () => {
-  console.log(`Hello from port: ${port}`);
-});
+const tourRouter = require("./routes/tour.route");
+const userRouter = require("./routes/user.route");
+
+app.use("/api/v1/tours", tourRouter);
+app.use("/api/v1/users", userRouter);
+
+module.exports = app;

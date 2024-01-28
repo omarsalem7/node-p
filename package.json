@@ -4,7 +4,8 @@
   "description": "learn node, express and mongoDB",
   "main": "app.js",
   "scripts": {
-    "dev": "npx nodemon app.js",
+    "dev": "nodemon server.js",
+    "prod": "SET NODE_ENV=production & nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,6 +19,11 @@
   },
   "homepage": "https://github.com/omarsalem7/node-p#readme",
   "dependencies": {
-    "express": "^4.18.2"
+    "dotenv": "^16.4.1",
+    "express": "^4.18.2",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
   }
 }
